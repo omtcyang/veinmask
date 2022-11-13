@@ -6,11 +6,11 @@ The code for implementing the VeinMask.
 
 
 ## News
-- The code for VeinMask is released, except inference.(2022.11.13)
+- The code for VeinMask is released.(2022.11.13)
 
 
-## Performances
-![visual](imgs/visual.png)
+## Visualization of ideas
+![visual](imgs/idea.png)
 
 
 
