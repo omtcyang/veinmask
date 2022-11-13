@@ -10,7 +10,7 @@ The code for implementing the VeinMask.
 
 
 ## Visualization of ideas
-![visual](imgs/idea.png)
+![visual](imgs/idea.jpg)
 
 
 
