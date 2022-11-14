@@ -9,7 +9,7 @@ The code for implementing the VeinMask.
 - The code for VeinMask is released.(2022.11.13)
 
 
-## Visualization of ideas
+## Visualization of our motivation
 ![visual](imgs/idea.jpg)
 
 
