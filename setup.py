@@ -151,18 +151,22 @@ if __name__ == '__main__':
                 name='soft_nms_cpu',
                 module='mmdet.ops.nms',
                 sources=['src/soft_nms_cpu.pyx']),
-            # make_cuda_ext(
-            #     name='roi_align_cuda',
-            #     module='mmdet.ops.roi_align',
-            #     sources=['src/roi_align_cuda.cpp', 'src/roi_align_kernel.cu']),
-            # make_cuda_ext(
-            #     name='roi_pool_cuda',
-            #     module='mmdet.ops.roi_pool',
-            #     sources=['src/roi_pool_cuda.cpp', 'src/roi_pool_kernel.cu']),
+            make_cuda_ext(
+                name='roi_align_cuda',
+                module='mmdet.ops.roi_align',
+                sources=['src/roi_align_cuda.cpp', 'src/roi_align_kernel.cu']),
+            make_cuda_ext(
+                name='roi_pool_cuda',
+                module='mmdet.ops.roi_pool',
+                sources=['src/roi_pool_cuda.cpp', 'src/roi_pool_kernel.cu']),
             make_cuda_ext(
                 name='nms_cpu',
                 module='mmdet.ops.nms',
                 sources=['src/nms_cpu.cpp']),
+            make_cuda_ext(
+                name='veinmask',
+                module='mmdet.core.post_processing',
+                sources=['src/vein_mask.cpp', 'src/vein_kernel.cu']),
             make_cuda_ext(
                 name='nms_cuda',
                 module='mmdet.ops.nms',
@@ -188,12 +192,12 @@ if __name__ == '__main__':
                     'src/sigmoid_focal_loss.cpp',
                     'src/sigmoid_focal_loss_cuda.cu'
                 ]),
-            # make_cuda_ext(
-            #     name='masked_conv2d_cuda',
-            #     module='mmdet.ops.masked_conv',
-            #     sources=[
-            #         'src/masked_conv2d_cuda.cpp', 'src/masked_conv2d_kernel.cu'
-            #     ]),
+            make_cuda_ext(
+                name='masked_conv2d_cuda',
+                module='mmdet.ops.masked_conv',
+                sources=[
+                    'src/masked_conv2d_cuda.cpp', 'src/masked_conv2d_kernel.cu'
+                ]),
         ],
         cmdclass={'build_ext': BuildExtension},
         zip_safe=False)
